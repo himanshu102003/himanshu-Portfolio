@@ -21,7 +21,11 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-app.use(cors());
+app.use(cors({
+    origin : ['https://himanshu102003.github.io/himanshu-Portfolio/'],
+    methods : ['GET', 'POST'],
+    Credential : true
+}));
 app.use(bodyParser.json());
 
 app.post('/contact', async (req, res) => {
