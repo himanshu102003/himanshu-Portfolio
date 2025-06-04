@@ -398,57 +398,137 @@ footer {
     text-align: center;
 }
 
+/* Experience Section */
+.experience-section {
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
 .experience-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .experience-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.experience-header {
     display: flex;
     align-items: center;
-    background: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #f6f8fd 0%, #eef2f8 100%);
+    border-bottom: 1px solid #eaeef5;
 }
 
 .company-logo {
-    flex: 0 0 100px;
-    margin-right: 20px;
+    flex: 0 0 80px;
+    height: 80px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .company-logo img {
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.experience-title {
+    text-align: left;
+    flex: 1;
+}
+
+.experience-title h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    color: #4a6ee0;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+}
+
+.duration {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 500;
 }
 
 .experience-details {
-    flex: 1;
+    padding: 1.5rem 2rem 2rem;
     text-align: left;
 }
 
-.experience-item h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
-}
-
-.experience-item p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-.experience-item ul {
+.experience-details ul {
     list-style: none;
     padding: 0;
-    text-align: left;
-    margin-top: 10px;
+    margin: 0;
 }
 
-.experience-item ul li {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 10px;
+.experience-details li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.experience-details li:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #4a6ee0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+    
+    .company-logo {
+        margin: 0 0 1rem 0;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .experience-title {
+        text-align: center;
+    }
+    
+    .experience-details {
+        padding: 1.5rem 1.5rem 2rem;
+    }
 }
 
 
